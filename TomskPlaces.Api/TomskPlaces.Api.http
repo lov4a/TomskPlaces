@@ -1,0 +1,6 @@
+@TomskPlaces.Api_HostAddress = http://localhost:5297
+
+GET {{TomskPlaces.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
