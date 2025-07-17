@@ -9,5 +9,6 @@
 		public Image? Image { get; set; }
 		public int? ImageId { get; set; }
 		public ICollection<PlaceOwner>? PlaceOwned { get; set; } = new List<PlaceOwner>();
+		public ICollection<Review>? Reviews { get; set; } = new List<Review>();
 	}
 }

@@ -6,5 +6,6 @@
 		public int PlaceId { get; set; }
 		public TypeOfPlace TypeOfPlace { get; set; } = null!;
 		public int TypeOfPlaceId { get; set; }
+
 	}
 }

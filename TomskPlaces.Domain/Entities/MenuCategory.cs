@@ -7,5 +7,6 @@
 		public int CateringId { get; set; }
 		public string CategoryName { get; set; } = "Категория меню";
 		public int SequenceNumber { get; set; }
+		public ICollection<CategoryDish> Dishes { get; set; } = new List<CategoryDish>();
 	}
 }
