@@ -5,7 +5,7 @@
 		public int Id { get; set; }
 		public string Name { get; set; } = null!;
 		public string Description { get; set; } = "Описание";
-		public string Adress { get; set; } = "г.Томск";
+		public string Address { get; set; } = "г.Томск";
 		public double Latitude { get; set; }
 		public double Longitude { get; set; }
 		public string Site { get; set; } = "https://";
@@ -17,8 +17,8 @@
 		public ICollection<WorkSchedule>? Schedules { get; set; } = new List<WorkSchedule>();
 		public ICollection<Review>? Reviews { get; set; } = new List<Review>();
 		public ICollection<PlaceImage>? Images { get; set; } = new List<PlaceImage>();
-		public ICollection<PlaceType>? Types { get; set; }
-		public ICollection<RoutePlace>? Routes { get; set; }
+		public ICollection<PlaceType>? Types { get; set; } = new List<PlaceType>();
+		public ICollection<RoutePlace>? Routes { get; set; } = new List<RoutePlace>();
 
 	}
 }
