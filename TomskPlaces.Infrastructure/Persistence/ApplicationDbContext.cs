@@ -18,7 +18,7 @@ namespace TomskPlaces.Infrastructure.Persistence
 		public DbSet<WorkSchedule> WorkSchedules { get; set; } = null!;
 		public DbSet<Review> Reviews { get; set; } = null!;
 		public DbSet<Image> Images { get; set; } = null!;
-		public DbSet<ReviewImage> ReviewsImages { get; set; } = null!;
+		public DbSet<ReviewImage> ReviewImages { get; set; } = null!;
 		public DbSet<PlaceImage> PlaceImages { get; set; } = null!;
 		public DbSet<Catering> Caterings { get; set; } = null!;
 		public DbSet<Entertainments> Entertainments { get; set;} = null!;
@@ -30,6 +30,10 @@ namespace TomskPlaces.Infrastructure.Persistence
 		public DbSet<CategoryDish> CategoryDish { get; set; } = null!;
 		public DbSet<Route> Route { get; set; } = null!;
 		public DbSet<RoutePlace> RoutePlace { get; set; } = null!;
+		public DbSet<Event> Events { get; set; } = null!;
+		public DbSet<Compilation> Compilations { get; set; } = null!;
+		public DbSet<CompilationPlace> CompilationPlace { get; set; } = null!;
+		public DbSet<News> Newses { get; set; } = null!;
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -40,6 +44,7 @@ namespace TomskPlaces.Infrastructure.Persistence
 			modelBuilder.Entity<Entertainments>().ToTable("Entertainments");
 			modelBuilder.Entity<Sport>().ToTable("Sports");
 			modelBuilder.Entity<WalkPlace>().ToTable("WalkPlaces");
+			modelBuilder.Entity<Event>().ToTable("Events");
 
 			modelBuilder.Entity<PlaceOwner>()
 				.HasKey(po => new { po.PlaceId, po.UserId });
@@ -144,6 +149,19 @@ namespace TomskPlaces.Infrastructure.Persistence
 				.WithMany(cd => cd.Dishes)
 				.HasForeignKey(cd => cd.CategoryId)
 				.OnDelete(DeleteBehavior.SetNull);
+			
+			modelBuilder.Entity<CompilationPlace>()
+				.HasKey(rp => new { rp.PlaceId, rp.CompilationId });
+			modelBuilder.Entity<CompilationPlace>()
+				.HasOne(cd => cd.Compilation)
+				.WithMany(cd => cd.Places)
+				.HasForeignKey(cd => cd.CompilationId)
+				.OnDelete(DeleteBehavior.Cascade);
+			modelBuilder.Entity<CompilationPlace>()
+				.HasOne(cd => cd.Place)
+				.WithMany(cd => cd.Compilations)
+				.HasForeignKey(cd => cd.PlaceId)
+				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}
 }

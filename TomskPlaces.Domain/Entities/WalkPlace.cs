@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TomskPlaces.Domain.Entities
 {
-	public class WalkPlace
+	public class WalkPlace : Place
 	{
 		public int Duration { get; set; } // в минутах
 	}

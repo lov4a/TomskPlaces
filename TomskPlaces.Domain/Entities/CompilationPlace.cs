@@ -1,11 +1,11 @@
 ﻿namespace TomskPlaces.Domain.Entities
 {
-	public class RoutePlace
+	public class CompilationPlace
 	{
 		public Place Place { get; set; } = null!;
 		public int PlaceId { get; set; }
-		public Route Route { get; set; } = null!;
-		public int RouteId { get; set; }
+		public Compilation Compilation { get; set; } = null!;
+		public int CompilationId { get; set; }
 		public int SequenceNumber { get; set; }
 	}
 }

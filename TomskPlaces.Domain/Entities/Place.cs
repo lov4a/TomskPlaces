@@ -19,6 +19,6 @@
 		public ICollection<PlaceImage>? Images { get; set; } = new List<PlaceImage>();
 		public ICollection<PlaceType>? Types { get; set; } = new List<PlaceType>();
 		public ICollection<RoutePlace>? Routes { get; set; } = new List<RoutePlace>();
-
+		public ICollection<CompilationPlace>? Compilations { get; set; } = new List<CompilationPlace>();
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace TomskPlaces.Domain.Entities
 {
-	public class Sport
+	public class Sport : Place
 	{
 		public int Duration { get; set; } // в минутах
 		public int MinNumberOfpeople { get; set; }
