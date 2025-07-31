@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TomskPlaces.Infrastructure.Persistence; // или твой namespace
+using TomskPlaces.Infrastructure.Persistence;
 
 namespace TomskPlaces.Api.Controllers;
 

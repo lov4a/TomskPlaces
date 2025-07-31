@@ -1,8 +1,11 @@
-﻿namespace TomskPlaces.Domain.Entities
+﻿using TomskPlaces.Domain.Enums;
+
+namespace TomskPlaces.Domain.Entities
 {
 	public abstract class Place
 	{
 		public int Id { get; set; }
+		public PlaceCategory Type { get; set; }
 		public string Name { get; set; } = null!;
 		public string Description { get; set; } = "Описание";
 		public string Address { get; set; } = "г.Томск";
@@ -15,7 +18,7 @@
 		public ICollection<PlacePhoneNumber>? PhoneNumbers { get; set; } = new List<PlacePhoneNumber>();
 		public ICollection<PlaceNetwork>? Networks { get; set; } = new List<PlaceNetwork>();
 		public ICollection<WorkSchedule>? Schedules { get; set; } = new List<WorkSchedule>();
-		public ICollection<Review>? Reviews { get; set; } = new List<Review>();
+		public ICollection<Review> Reviews { get; set; } = new List<Review>();
 		public ICollection<PlaceImage>? Images { get; set; } = new List<PlaceImage>();
 		public ICollection<PlaceType>? Types { get; set; } = new List<PlaceType>();
 		public ICollection<RoutePlace>? Routes { get; set; } = new List<RoutePlace>();

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TomskPlaces.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using TomskPlaces.Infrastructure.Persistence;
 namespace TomskPlaces.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250729110744_FixCatering")]
+    partial class FixCatering
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -524,8 +527,8 @@ namespace TomskPlaces.Infrastructure.Persistence.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<TimeSpan>("CloseTime")
-                        .HasColumnType("interval");
+                    b.Property<TimeOnly>("CloseTime")
+                        .HasColumnType("time without time zone");
 
                     b.Property<int>("DayOfWeek")
                         .HasColumnType("integer");
@@ -533,8 +536,8 @@ namespace TomskPlaces.Infrastructure.Persistence.Migrations
                     b.Property<bool>("IsClosed")
                         .HasColumnType("boolean");
 
-                    b.Property<TimeSpan>("OpenTime")
-                        .HasColumnType("interval");
+                    b.Property<TimeOnly>("OpenTime")
+                        .HasColumnType("time without time zone");
 
                     b.Property<int>("PlaceId")
                         .HasColumnType("integer");

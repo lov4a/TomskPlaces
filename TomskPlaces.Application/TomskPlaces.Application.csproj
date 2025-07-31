@@ -2,7 +2,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TomskPlaces.Domain\TomskPlaces.Domain.csproj" />
-    <ProjectReference Include="..\TomskPlaces.Infrastructure\TomskPlaces.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.18" />
   </ItemGroup>
 
   <PropertyGroup>

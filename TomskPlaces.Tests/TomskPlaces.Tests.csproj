@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.18" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.18" />
+		<PackageReference Include="Moq" Version="4.20.72" />
+		<PackageReference Include="xunit" Version="2.5.3" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\TomskPlaces.Infrastructure\TomskPlaces.Infrastructure.csproj" />
+		<ProjectReference Include="..\TomskPlaces.Domain\TomskPlaces.Domain.csproj" />
+		<ProjectReference Include="..\TomskPlaces.Application\TomskPlaces.Application.csproj" />
+	</ItemGroup>
+
+</Project>

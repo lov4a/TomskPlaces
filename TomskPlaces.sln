@@ -3,21 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomskPlaces.Api", "TomskPlaces.Api\TomskPlaces.Api.csproj", "{042DC4D6-8088-48F1-B475-4438E8D6386E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomskPlaces.Api", "TomskPlaces.Api\TomskPlaces.Api.csproj", "{042DC4D6-8088-48F1-B475-4438E8D6386E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomskPlaces.Domain", "TomskPlaces.Domain\TomskPlaces.Domain.csproj", "{CCEFC47B-F985-402E-9E11-12DF804BBFAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomskPlaces.Domain", "TomskPlaces.Domain\TomskPlaces.Domain.csproj", "{CCEFC47B-F985-402E-9E11-12DF804BBFAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomskPlaces.Infrastructure", "TomskPlaces.Infrastructure\TomskPlaces.Infrastructure.csproj", "{F71B2029-E73F-4C1E-8276-FFE84F2911A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomskPlaces.Infrastructure", "TomskPlaces.Infrastructure\TomskPlaces.Infrastructure.csproj", "{F71B2029-E73F-4C1E-8276-FFE84F2911A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TomskPlaces.Application", "TomskPlaces.Application\TomskPlaces.Application.csproj", "{AB3F53AE-ED6D-4AF3-BC08-DC236C411160}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomskPlaces.Application", "TomskPlaces.Application\TomskPlaces.Application.csproj", "{AB3F53AE-ED6D-4AF3-BC08-DC236C411160}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TomskPlaces.Tests", "TomskPlaces.Tests\TomskPlaces.Tests.csproj", "{23F233F0-D7D5-4AD3-AA89-013E2EF96D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{042DC4D6-8088-48F1-B475-4438E8D6386E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +35,15 @@ Global
 		{AB3F53AE-ED6D-4AF3-BC08-DC236C411160}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB3F53AE-ED6D-4AF3-BC08-DC236C411160}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB3F53AE-ED6D-4AF3-BC08-DC236C411160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F233F0-D7D5-4AD3-AA89-013E2EF96D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F233F0-D7D5-4AD3-AA89-013E2EF96D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F233F0-D7D5-4AD3-AA89-013E2EF96D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F233F0-D7D5-4AD3-AA89-013E2EF96D71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {499A4037-F075-4647-88C6-A40D37C69DA4}
 	EndGlobalSection
 EndGlobal
